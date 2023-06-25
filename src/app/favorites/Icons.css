@@ -1,0 +1,54 @@
+
+.icons__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  padding: 5vw 7.5vw;
+  justify-content: flex-start;
+}
+
+.icons__icon-wrapper {
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.icons__number {
+  display: flex;
+  height: 2.4rem;
+  min-width: 2.4rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 700;
+  background-color: red;
+  border-radius: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 2vw;
+}
+
+.icons__image-wrapper {
+  height: 20vh;
+  width: 20vh;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+}
+
+.icons__photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.icons__name {
+  font-weight: 700;
+  margin-top: 1vh;
+}

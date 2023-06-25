@@ -1,0 +1,134 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
+.detail-page {
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  /* font-family: 'Noto Serif JP', serif; */
+  font-family: 'Shippori Mincho', serif;
+  height: 100vh;
+  color: rgb(100, 100, 100);
+}
+
+.swiper [class^="swiper-button-"]::after {
+  font-size: 30px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.detail-back-box {
+  position: relative;
+}
+
+.detail-back {
+  position: absolute;
+  top: 0.8em;
+  left: 0.8em;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  font-size: 1em;
+  border-radius: 50%;
+  padding: 0.3em;
+  z-index: 2;
+}
+
+.detail-card-photo {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+}
+
+.detail-description {
+  padding: 0 1em;
+}
+
+.detail-description-title {
+  color: black;
+  padding-bottom: 0.5em;
+}
+
+.detail-icon {
+  font-size: 1.2em;
+  margin-top: 0.15em;
+  margin-right: 0.15em;
+}
+
+.post-code {
+  font-size: 0.8em;
+}
+
+.detail-address {
+  text-decoration: underline;
+}
+
+.detail-description h3 {
+  color: black;
+  border-top: solid 1px rgb(230, 230, 230);
+  padding: 0.5em 0 0.3em 0;
+  display: flex;
+  align-items: center;
+}
+
+.detail-description p {
+  padding-bottom: 0.7em;
+}
+
+.detail-description ul {
+  font-size: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.detail-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2em;
+  padding: 0.3em 0;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  border-top: solid 1px rgb(230, 230, 230);
+}
+
+.detail-footer-dislike {
+  background-color: rgb(70, 100, 200);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.2em 0.01em rgb(200, 200, 200);
+}
+
+.detail-footer-like {
+  background-color: rgb(200, 70, 130);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.2em 0.01em rgb(200, 200, 200);
+}
+
+.detail-dislike {
+  color: white;
+  font-size: 0.8em;
+}
+
+.detail-like {
+  color: white;
+  font-size: 0.8em;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "my-next-js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "knex migrate:rollback --knexfile src/backend/knexfile.js && knex migrate:latest --knexfile src/backend/knexfile.js && knex seed:run --knexfile src/backend/knexfile.js && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "node src/backend/server.js"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^5.0.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "aws-amplify": "^5.3.1",
+    "better-sqlite3": "^8.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "framer-motion": "^10.12.16",
+    "knex": "^2.4.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.4.1",
+    "next": "13.4.6",
+    "oracledb": "^6.0.1",
+    "pg": "^8.11.0",
+    "pg-query-stream": "^4.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "sqlite3": "^5.1.6",
+    "swiper": "^9.4.1",
+    "tedious": "^16.1.0",
+    "typescript": "5.1.3"
+  }
+}

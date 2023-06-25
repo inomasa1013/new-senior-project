@@ -1,0 +1,69 @@
+header {
+  display: flex;
+  margin-top: 2vh;
+  margin-left: 4vw;
+}
+
+.spots__main {
+  margin-bottom: 3em;
+}
+
+.spots__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  padding: 2.5vh 7.5vw;
+  justify-content: flex-start;
+}
+
+.spots__spot-wrapper {
+  display: flex;
+  height: 30vh;
+  width: 40vw;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 10%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.spots__price {
+  display: flex;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(180, 180, 180);
+  border-radius: 5%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.2rem;
+
+  position: absolute;
+  bottom: 9vh;
+  left: 1vw;
+}
+
+.spots__image-wrapper {
+  height: 24vh;
+  width: 100%;
+  border: 1px solid rgb(200, 200, 200);
+  overflow: hidden;
+}
+
+.spots__photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spots__name {
+  width: 100%;
+  padding: 0 5%;
+  font-weight: 700;
+  margin-top: 1vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,71 @@
+@media screen and (max-width: 400px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .login__image-wrapper {
+    height: 30vh;
+    width: 30vh;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+    margin: 10vh 0 5vh 0;
+  }
+
+  .login__photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .login__form {
+    width: 70vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-bottom: 2vh;
+  }
+
+  .login__button {
+    height: 2.4rem;
+    width: 100%;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    margin-bottom: 2vh;
+  }
+
+  input {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 2vh;
+    padding: 10px;
+  }
+
+  .login__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  a {
+    font-size: small;
+  }
+
+  .navbar__forgot-password-link {
+    color: rgb(100, 100, 100);
+    margin-right: auto;
+  }
+
+  .navbar__sign-up-link {
+    color: dodgerblue;
+  }
+}

@@ -1,0 +1,24 @@
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  padding: 0.4em 0.5em 0.2em 0.5em;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: solid 1px rgb(230, 230, 230);
+  width: 100%;
+  z-index: 2;
+  height: 1.6em;
+  color: rgb(130, 130, 130);
+}
+
+.footer-icon {
+  height: 50px;
+}
+
+.footer-up {
+  color: rgb(150, 150, 150);
+}
