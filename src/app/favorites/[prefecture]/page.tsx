@@ -62,8 +62,8 @@ export default function spot({ params }: { params: { prefecture: string } }): JS
   useEffect(() => {
     async function fetchData<T>(): Promise<void> {
       // いいねスポットデータをfetch
-      const res: T = await fetch(`${SERVER_URL}/api/favorites/${prefecture}`).then((res) =>
-        // const res: T = await fetch(`http://localhost:3000/api/favorites/${prefecture}`).then((res) =>
+      // const res: T = await fetch(`${SERVER_URL}/api/favorites/${prefecture}`).then((res) =>
+      const res: T = await fetch(`http://localhost:3000/api/favorites/${prefecture}`).then((res) =>
         res.json()
       );
       console.log('res', res);

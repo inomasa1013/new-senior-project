@@ -63,7 +63,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     let elm: any = {};
 
     result.forEach((obj: any) => {
-      if (obj.name === favorite.name) {
+      if (obj.name === favorite.prefecture) {
         flg = false;
       }
     });
@@ -79,8 +79,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
         }
       });
       elm.number = number;
+      result.push(elm);
     }
-    result.push(elm);
   });
   return NextResponse.json(result);
 }
@@ -88,14 +88,13 @@ export async function GET(req: NextRequest, res: NextResponse) {
 // エラー出るが一応インサートできる。
 export async function POST(req: NextRequest, res: NextResponse) {
   const body = await req.json();
-  console.log('body', body);
   knex('FAVORITE')
     .insert(body)
     .then(() => {})
     .catch((err: any) => {
       console.error(err);
     });
-  // return NextResponse.json(prefectures);
+  return NextResponse.json(body);
 }
 
 // // GET 県別いいね数取得

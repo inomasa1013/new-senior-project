@@ -68,7 +68,11 @@ const favorite = () => {
         <h1>いいね一覧</h1>
       </header>
       <main className="favorites__main">
-        <Icons favoriteData={favoriteData} />
+        {favoriteData.length ? (
+          <Icons favoriteData={favoriteData} />
+        ) : (
+          <h2 className="zanteitaisaku">行きたい場所をいいねしよう！</h2>
+        )}
       </main>
       <Footer />
     </React.Fragment>
