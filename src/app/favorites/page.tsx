@@ -54,8 +54,8 @@ const favorite = () => {
   useEffect(() => {
     async function fetchData<T>(): Promise<void> {
       // 県別いいねデータ取得
-      // const res: T = await fetch(`${SERVER_URL}/api/favorites`).then((res) => res.json());
-      const res: T = await fetch(`http://localhost:3000/api/favorites`).then((res) => res.json());
+      const res: T = await fetch(`${SERVER_URL}/api/favorites`).then((res) => res.json());
+      // const res: T = await fetch(`http://localhost:3000/api/favorites`).then((res) => res.json());
       console.log('res', res);
       setFavoriteData(res);
     }

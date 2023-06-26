@@ -7,11 +7,12 @@ import { PiMapPinLight } from 'react-icons/pi';
 import MySwiper from './MySwiper';
 import { Cards } from '@/globals';
 import { cards } from '@/data/cards';
+import SERVER_URL from '@/serverfile';
 
 type Props = {
   index: number;
   // image: string;
-  images: string[];
+  images: string | string[];
   title: string;
   postCode: string;
   address: string;
@@ -77,14 +78,15 @@ const TinderSwipe: React.FC<Props> = memo(
       const postData = await fetch(
         // "/api/favorites",
         // "http://localhost:3001/api/favorites",
-        'http://localhost:3000/api/favorites',
+        // 'http://localhost:3000/api/favorites',
+        `${SERVER_URL}/api/favorites`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           // body: JSON.stringify({ user_id: 1, ...postObj }),
-          body: JSON.stringify({ user_id: 33, ...postObj }),
+          body: JSON.stringify({ user_id: 1, ...postObj }),
         }
       ).then((data) => data.json());
       console.log(postData);

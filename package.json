@@ -7,7 +7,8 @@
     "build": "knex migrate:rollback --knexfile src/backend/knexfile.js && knex migrate:latest --knexfile src/backend/knexfile.js && knex seed:run --knexfile src/backend/knexfile.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "node src/backend/server.js"
+    "server": "node src/backend/server.js",
+    "nextbuild": "next build"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^5.0.2",

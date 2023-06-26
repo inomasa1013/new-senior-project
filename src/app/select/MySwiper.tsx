@@ -1,4 +1,3 @@
-
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -18,30 +17,38 @@ SwiperCore.use([Pagination, Navigation]);
 // ];
 
 type Props = {
-  images: string[];
+  images: string[] | string;
   className: string;
-}
+};
 
 const MySwiper: React.FC<Props> = ({ images, className }) => {
-return (
+  return (
     <Swiper
-      slidesPerView={1}   //一度に表示するスライドの数
+      slidesPerView={1} //一度に表示するスライドの数
       pagination={{
         clickable: true,
-      }}   //　何枚目のスライドかを示すアイコン、スライドの下の方にある
-      navigation   //スライドを前後させるためのボタン、スライドの左右にある
+      }} //　何枚目のスライドかを示すアイコン、スライドの下の方にある
+      navigation //スライドを前後させるためのボタン、スライドの左右にある
       loop={true}
       allowTouchMove={false}
     >
-      {images.map((src: string, index: number) => {
-        return (
-          <SwiperSlide key={`${index}`}>
-            <img className={className} src={src} alt="香嵐渓の写真" />
-          </SwiperSlide>
-        )
-      })}
+      {typeof images === 'string'
+        ? JSON.parse(images).map((src: string, index: number) => {
+            return (
+              <SwiperSlide key={`${index}`}>
+                <img className={className} src={src} alt="香嵐渓の写真" />
+              </SwiperSlide>
+            );
+          })
+        : images.map((src: string, index: number) => {
+            return (
+              <SwiperSlide key={`${index}`}>
+                <img className={className} src={src} alt="香嵐渓の写真" />
+              </SwiperSlide>
+            );
+          })}
     </Swiper>
-  )
-}
+  );
+};
 
 export default MySwiper;

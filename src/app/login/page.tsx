@@ -7,8 +7,10 @@ const login = () => {
   const [mail, setMail] = useState<String>('');
   const [password, setPassword] = useState<String>('');
 
-  const handleMail = (e: { target: HTMLButtonElement }): void => setMail(e.target.value);
-  const handlePassword = (e: { target: HTMLButtonElement }): void => setPassword(e.target.value);
+  // const handleMail = (e: { target: HTMLButtonElement }): void => setMail(e.target.value);
+  // const handlePassword = (e: { target: HTMLButtonElement }): void => setPassword(e.target.value);
+  const handleMail = (e: any): void => setMail(e.target.value);
+  const handlePassword = (e: any): void => setPassword(e.target.value);
 
   return (
     <main className="login__main">
@@ -25,12 +27,12 @@ const login = () => {
           Email
         </label>
         {/* 型エラーの解決策わかりませんが、動作は正常なことを確認済み by Asaoka */}
-        <input type="text" onChange={handleMail} />
+        <input type="text" onChange={(e) => handleMail(e)} />
         <label className="login__label" htmlFor="">
           Password
         </label>
         {/* 型エラーの解決策わかりませんが、動作は正常なことを確認済み by Asaoka */}
-        <input type="text" onChange={handlePassword} />
+        <input type="text" onChange={(e) => handlePassword(e)} />
         <button className="login__button">Sign in</button>
         <div className="login__navbar">
           <a href="#" className="navbar__forgot-password-link">

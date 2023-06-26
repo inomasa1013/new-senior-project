@@ -20,6 +20,7 @@ import './detail.css';
 import MySwiper from '../MySwiper';
 import { cards } from '@/data/cards';
 import { Cards } from '@/globals';
+import SERVER_URL from '@/serverfile';
 
 const detail = memo(({ params }: { params: { detail: string } }): JSX.Element => {
   const index = parseInt(decodeURIComponent(params.detail));
@@ -55,13 +56,14 @@ const detail = memo(({ params }: { params: { detail: string } }): JSX.Element =>
     const postData = await fetch(
       // "/api/favorites",
       // 'http://localhost:3001/api/favorites',
-      'http://localhost:3000/api/favorites',
+      // 'http://localhost:3000/api/favorites',
+      `${SERVER_URL}/api/favorites`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ user_id: 33, ...postObj }),
+        body: JSON.stringify({ user_id: 1, ...postObj }),
       }
     ).then((data) => data.json());
     console.log(postData);
