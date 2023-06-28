@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Icons from './Icons';
+import React, { useState, useEffect } from "react";
+import { View, Text } from "react-native";
+import Icons from "./Icons";
+import { styles } from "./style";
 
-import './page.css';
-import { Prefecture } from '@/globals';
-import SERVER_URL from '@/serverfile';
-import Footer from '@/components/Footer';
+import "./page.css";
+import { Prefecture } from "@/globals";
+import SERVER_URL from "@/serverfile";
+import Footer from "@/components/Footer";
 
 const favorite = () => {
   // お気に入りが多い順番に受け取る。
@@ -54,9 +56,11 @@ const favorite = () => {
   useEffect(() => {
     async function fetchData<T>(): Promise<void> {
       // 県別いいねデータ取得
-      const res: T = await fetch(`${SERVER_URL}/api/favorites`).then((res) => res.json());
+      const res: T = await fetch(`${SERVER_URL}/api/favorites`).then((res) =>
+        res.json()
+      );
       // const res: T = await fetch(`http://localhost:3000/api/favorites`).then((res) => res.json());
-      console.log('res', res);
+      console.log("res", res);
       setFavoriteData(res);
     }
     fetchData<Prefecture[]>();
@@ -64,16 +68,16 @@ const favorite = () => {
 
   return (
     <React.Fragment>
-      <header>
-        <h1>いいね一覧</h1>
-      </header>
-      <main className="favorites__main">
+      <View>
+        <Text>いいね一覧</Text>
+      </View>
+      <View>
         {favoriteData.length ? (
           <Icons favoriteData={favoriteData} />
         ) : (
-          <h2 className="zanteitaisaku">行きたい場所をいいねしよう！</h2>
+          <Text style={styles.zanteitaisaku}>行きたい場所をいいねしよう！</Text>
         )}
-      </main>
+      </View>
       <Footer />
     </React.Fragment>
   );
